@@ -1,0 +1,10 @@
+#/etc/udev/rules.d/98-lin_tape.rules 
+#Making library and tape devices persistant by serial number and WWPNs
+
+KERNEL=="IBMchanger*[!n]", ATTR{serial_num}=="000001325200_LLA",SYMLINK="lin_tape/by-id/lin_changer0", OWNER="tsminst1", GROUP="tsmsrvrs"
+KERNEL=="IBMtape*[!n]", ATTR{ww_port_name}=="0x500308C3A383F001",SYMLINK="lin_tape/by-id/lin_tape_Drive1", OWNER="tsminst1", GROUP="tsmsrvrs"
+KERNEL=="IBMtape*[!n]", ATTR{ww_port_name}=="0x500308C3A383F005",SYMLINK="lin_tape/by-id/lin_tape_Drive2", OWNER="tsminst1", GROUP="tsmsrvrs"
+KERNEL=="IBMtape*[!n]", ATTR{ww_port_name}=="0x500308C3A383F091",SYMLINK="lin_tape/by-id/lin_tape_Drive3", OWNER="tsminst1", GROUP="tsmsrvrs"
+KERNEL=="IBMtape*[!n]", ATTR{ww_port_name}=="0x500308C3A383F095",SYMLINK="lin_tape/by-id/lin_tape_Drive4", OWNER="tsminst1", GROUP="tsmsrvrs"
+KERNEL=="IBMtape*[!n]", ATTR{ww_port_name}=="0x500308C3A383F099",SYMLINK="lin_tape/by-id/lin_tape_Drive5", OWNER="tsminst1", GROUP="tsmsrvrs"
+KERNEL=="IBMtape*[!n]", ATTR{ww_port_name}=="0x500308C3A383F09D",SYMLINK="lin_tape/by-id/lin_tape_Drive6", OWNER="tsminst1", GROUP="tsmsrvrs"
